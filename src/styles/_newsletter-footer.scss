@@ -1,0 +1,200 @@
+@use "variables" as *;
+
+.newsletter {
+  background: $color-navy;
+  color: #fff;
+  padding-block: 2rem;
+}
+
+.newsletter__grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+  }
+}
+
+.newsletter__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.newsletter__desc {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.88;
+  line-height: 1.5;
+  max-width: 22rem;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.newsletter__row {
+  display: grid;
+  gap: 0.65rem;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.newsletter__input {
+  padding: 0.65rem 0.85rem;
+  border-radius: $radius-sm;
+  border: 1px solid rgb(255 255 255 / 25%);
+  background: rgb(255 255 255 / 10%);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+}
+
+.newsletter__input::placeholder {
+  color: rgb(255 255 255 / 55%);
+}
+
+.newsletter__check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.newsletter__check input {
+  margin-top: 0.2rem;
+}
+
+.newsletter__submit {
+  align-self: flex-start;
+  padding: 0.65rem 1.5rem;
+  background: $color-yellow-hero;
+  color: $color-navy;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+.site-footer {
+  background: #fff;
+  padding-block: 2.5rem 1rem;
+  border-top: 1px solid $border-soft;
+}
+
+.site-footer__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: 1.2fr repeat(3, 1fr);
+  }
+}
+
+.site-footer__about .econverse-logo {
+  margin-bottom: 1rem;
+}
+
+.site-footer__social {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.site-footer__social a {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-navy;
+  border-radius: $radius-sm;
+  text-decoration: none;
+}
+
+.site-footer__social-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.site-footer__social a:hover {
+  background: $bg-input;
+  color: $color-blue-link;
+}
+
+.site-footer__text {
+  margin: 0;
+  font-size: 12px;
+  color: $text-muted;
+  line-height: 1.55;
+  max-width: 20rem;
+}
+
+.site-footer__heading {
+  margin: 0 0 0.75rem;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-navy;
+}
+
+.site-footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer__list li {
+  margin-bottom: 0.45rem;
+}
+
+.site-footer__list a {
+  font-size: 12px;
+  color: $text-muted;
+  text-decoration: none;
+}
+
+.site-footer__list a:hover {
+  color: $color-blue-link;
+}
+
+.footer-bar {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid $border-soft;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: $text-muted;
+}
+
+.footer-bar__payments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.footer-bar__pay {
+  padding: 0.2rem 0.45rem;
+  border: 1px solid $border-soft;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: $text-muted;
+}

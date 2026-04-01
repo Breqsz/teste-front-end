@@ -1,0 +1,179 @@
+@use "variables" as *;
+
+.product-modal {
+  padding: 0;
+  border: none;
+  border-radius: $radius-lg;
+  max-width: min(94vw, 720px);
+  width: 100%;
+  background: $bg-card;
+  box-shadow: $shadow-modal;
+
+  &::backdrop {
+    background: rgb(15 15 25 / 55%);
+    backdrop-filter: blur(3px);
+  }
+}
+
+.product-modal__inner {
+  position: relative;
+  padding: 1.5rem 1.25rem 1.5rem;
+}
+
+.product-modal__close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: $text-muted;
+  cursor: pointer;
+  border-radius: $radius-sm;
+}
+
+.product-modal__close:hover {
+  background: $bg-input;
+  color: $text-body;
+}
+
+.product-modal__close:focus-visible {
+  outline: 2px solid $color-yellow;
+  outline-offset: 2px;
+}
+
+.product-modal__grid {
+  display: grid;
+  gap: 1.25rem;
+  padding-top: 0.25rem;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    align-items: start;
+    gap: 1.5rem;
+  }
+}
+
+.product-modal__image {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: $radius-md;
+  background: #fafafa;
+  padding: 1rem;
+}
+
+.product-modal__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-right: 1.5rem;
+}
+
+.product-modal__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: $text-body;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.product-modal__price {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: $text-body;
+}
+
+.product-modal__desc {
+  margin: 0;
+  font-size: 13px;
+  color: $text-muted;
+  line-height: 1.5;
+}
+
+.product-modal__more {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  color: $color-blue-link;
+  cursor: pointer;
+  text-align: left;
+  width: fit-content;
+}
+
+.product-modal__more:hover {
+  text-decoration: underline;
+}
+
+.product-modal__qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $border-soft;
+  border-radius: $radius-sm;
+  overflow: hidden;
+  margin-top: 0.35rem;
+  width: fit-content;
+}
+
+.product-modal__qty button {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  background: $bg-input;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: $color-navy;
+}
+
+.product-modal__qty button:hover {
+  background: $border-soft;
+}
+
+.product-modal__qty button:focus-visible {
+  outline: 2px solid $color-yellow;
+  outline-offset: -2px;
+}
+
+.product-modal__qty span {
+  min-width: 2.5rem;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.product-modal__buy {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: $color-yellow-cta;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: $radius-sm;
+  cursor: pointer;
+}
+
+.product-modal__buy:hover {
+  filter: brightness(1.03);
+}
+
+.product-modal__buy:focus-visible {
+  outline: 2px solid $color-navy;
+  outline-offset: 2px;
+}

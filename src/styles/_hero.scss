@@ -1,0 +1,92 @@
+@use "variables" as *;
+
+.hero {
+  position: relative;
+  min-height: clamp(280px, 48vw, 420px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #0a0818;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-color: #0a0818;
+  background-image: url("/images/hero-promo.jpg");
+  background-size: cover;
+  background-position: center 35%;
+}
+
+.hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(8 6 20 / 88%) 0%,
+    rgb(8 6 20 / 65%) 42%,
+    rgb(8 6 20 / 35%) 72%,
+    rgb(8 6 20 / 20%) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-block: clamp(2rem, 5vw, 3.25rem);
+}
+
+.hero__text {
+  max-width: 22rem;
+  text-align: left;
+}
+
+.hero__title {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.4rem, 3.8vw, 2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.hero__highlight {
+  margin: 0 0 1.35rem;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.hero__highlight-accent {
+  color: $color-yellow-hero;
+}
+
+.hero__highlight-rest {
+  color: #fff;
+  font-weight: 500;
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: $color-yellow-hero;
+  color: #1a1a1a;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  border: none;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero__cta:hover {
+  filter: brightness(1.06);
+}
+
+.hero__cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}

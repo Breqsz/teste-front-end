@@ -1,0 +1,116 @@
+@use "variables" as *;
+
+.category-strip {
+  padding-block: 1.75rem 2rem;
+  background: #fff;
+}
+
+.category-strip__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem 0.5rem;
+
+  @media (min-width: $breakpoint-md) {
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+}
+
+.category-tile {
+  flex: 1 1 calc(25% - 0.5rem);
+  min-width: 4.5rem;
+  max-width: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.25rem 0.1rem;
+  border: none;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .category-tile {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+.category-tile:focus-visible {
+  outline: 2px solid $color-yellow-hero;
+  outline-offset: 3px;
+}
+
+.category-tile__icon-wrap {
+  width: 100%;
+  max-width: 4.25rem;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.6rem;
+  background: #f4f4f4;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 8%);
+  overflow: hidden;
+  transition:
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.category-tile--active .category-tile__icon-wrap {
+  background: #fafafa;
+  box-shadow:
+    0 2px 8px rgb(0 0 0 / 10%),
+    0 0 0 2px $color-category-active;
+}
+
+.category-tile__icon {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 68%;
+  max-height: 68%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.category-tile__label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #4a4a4a;
+  line-height: 1.25;
+  max-width: 6.5rem;
+}
+
+.category-tile--active .category-tile__label {
+  color: $color-category-active;
+  font-weight: 700;
+}
+
+@media (min-width: $breakpoint-md) {
+  .category-tile__icon-wrap {
+    max-width: 4.75rem;
+    padding: 0.6rem 0.65rem;
+    border-radius: 14px;
+  }
+
+  .category-tile__label {
+    font-size: 11px;
+    max-width: none;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .category-tile__icon-wrap {
+    max-width: 5rem;
+  }
+}

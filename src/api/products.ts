@@ -1,5 +1,5 @@
 // API de produtos: fetch no JSON público da Econverse + validação do corpo da resposta
-import type { Product } from '../../../../../../Downloads/teste-front-end-main/src/types/product'
+import type { Product } from '../types/product'
 
 // URL oficial se VITE_PRODUCTS_URL não existir (.env.development / .env.production)
 const DEFAULT_PRODUCTS_URL =

@@ -1,0 +1,46 @@
+@use "variables" as *;
+
+.topbar {
+  background: #fff;
+  color: $color-topbar-muted;
+  font-size: 12px;
+  border-bottom: 1px solid $border-soft;
+}
+
+.topbar__inner {
+  max-width: $max-page;
+  margin-inline: auto;
+  padding: 0.55rem clamp(1rem, 3vw, 1.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 2.5rem;
+}
+
+.topbar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.topbar__icon {
+  flex-shrink: 0;
+  color: $color-topbar-muted;
+}
+
+.topbar__text {
+  line-height: 1.35;
+}
+
+.topbar__muted {
+  color: $color-topbar-muted;
+  font-weight: 400;
+}
+
+.topbar__accent {
+  color: $color-topbar-accent;
+  font-weight: 700;
+}

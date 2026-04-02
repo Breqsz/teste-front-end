@@ -68,7 +68,6 @@ npm run lint         # ESLint
 ## 🧠 Observações técnicas
 
 - Em desenvolvimento, o **proxy do Vite** contorna CORS.
-- Em produção, foi utilizado **mock local**.
 
 ## 🖼️ Assets
 
@@ -78,5 +77,3 @@ npm run lint         # ESLint
 
 - **Figma:** [Teste Front-End Jr](https://www.figma.com/design/pl8ccQrjQjEFIdoZuAPu1E/Teste-Front-End-Jr--c%C3%B3pia-?node-id=0-1)
 - **JSON:** [produtos.json](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json)
-
-Envio do teste (instruções originais): fork no GitHub e link para **julia.gardiano@econverse.com.br**, assunto **Teste Vaga FrontEnd**.

@@ -11,7 +11,7 @@ Vitrine em React, TypeScript e Sass, fiel ao layout do desafio. Lista de produto
 | **WhatsApp** | +55 (34) 9 9919-4509 |
 | **LinkedIn** | https://www.linkedin.com/in/guilhermebreq/|
 | **Portfólio** | https://breq.com.br |
-
+| **Link para TESTE do projeto** | https://frontendbreq.netlify.app |
 ---
 
 ## Por que o `.env` está no repositório

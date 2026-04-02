@@ -15,7 +15,7 @@ Sem uso de bibliotecas de componentes prontas.
 | **WhatsApp** | +55 (34) 9 9919-4509 |
 | **LinkedIn** | https://www.linkedin.com/in/guilhermebreq/ |
 | **Portfólio** | https://breq.com.br |
-| **Projeto online** | https://frontendbreq.netlify.app |
+| **Projeto online** | https://breqfrontteste.netlify.app |
 
 ---
 

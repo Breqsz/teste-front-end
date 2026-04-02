@@ -8,7 +8,7 @@ Vitrine em React, TypeScript e Sass, fiel ao layout do desafio. Lista de produto
 |---|---|
 | **Nome** | Guilherme Rocha Bianchini |
 | **E-mail** | guirochabianchini@gmail.com|
-| **WhatsApp** | _+55 (34) 9 9919-4509 |
+| **WhatsApp** | +55 (34) 9 9919-4509 |
 | **LinkedIn** | https://www.linkedin.com/in/guilhermebreq/|
 | **Portfólio** | https://breq.com.br |
 

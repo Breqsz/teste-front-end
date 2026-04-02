@@ -1,85 +1,55 @@
-# Teste Front-End — Econverse
+# Teste front-end — Econverse
 
-Implementação em **React**, **TypeScript** e **Sass** da vitrine conforme o layout do teste (referência Figma). Os produtos vêm do JSON público da Econverse; ao clicar em um item, abre um **modal** com nome, preço, descrição e foto. **Sem** bibliotecas de UI (Bootstrap, etc.).
+Vitrine em React, TypeScript e Sass, fiel ao layout do desafio. Lista de produtos via JSON público; clique no card abre um modal com detalhes. Sem biblioteca de componentes pronta.
 
-## Pré-requisitos
+## Contato (preencha)
 
-- Node.js 20 ou superior
+| | |
+|---|---|
+| **Nome** | _Seu nome_ |
+| **E-mail** | _seu@email.com_ |
+| **WhatsApp** | _+55 (__) _____-_____ |
+| **LinkedIn** | _https://linkedin.com/in/seu-perfil_ |
+| **Portfólio** | _https://..._ |
+
+---
+
+## Por que o `.env` está no repositório
+
+Este projeto versiona `.env.development` e `.env.production` com a variável `VITE_PRODUCTS_URL` (URL do JSON — dado público, não é segredo).
+
+**Motivo aqui:** quem clonar o repo ou rodar o build em CI consegue subir o projeto sem adivinhar variáveis. Para um teste técnico, isso evita fricção.
+
+**Na vida real** isso costuma ser evitado: credenciais e URLs internas não vão para o Git; usa-se `.env.example` (sem valores sensíveis), variáveis no painel da hospedagem ou um gerenciador de secrets. Sei que commitar `.env` não é o ideal em produção — foi uma escolha consciente **só** para este contexto.
+
+---
+
+## Requisitos
+
+- Node.js 20+
 - npm
 
-## Instalação
-
-Na **raiz do projeto** (pasta onde está o arquivo `package.json`):
+## Instalação e scripts
 
 ```bash
 npm install
+npm run dev          # desenvolvimento
+npm run build        # build de produção → pasta dist/
+npm run preview      # servir o build localmente
+npm test             # testes (Vitest)
+npm run dev:test     # testes em modo watch
+npm run lint         # ESLint
 ```
 
-Se você ainda tiver uma pasta vazia `teste-front-end-main` dentro da raiz (resto de zip antigo), pode apagá-la manualmente depois de fechar programas que estejam usando essa pasta.
+Em **dev**, a URL do JSON é relativa e o proxy do Vite (`vite.config.ts`) encaminha para `app.econverse.com.br`, contornando CORS. No **build**, vale o `.env.production` com a URL absoluta do `produtos.json`.
 
-### Imagens do layout (banner e parceiros)
+## Assets
 
-Arquivos em `public/images/`:
+Imagens estáticas em `public/images/` (ícones do header, categorias, `hero-promo.jpg`, `partners-bg.jpg`, favicon, etc.). Os nomes precisam bater com o que o código e o Sass referenciam.
 
-- `hero-promo.jpg` — fundo do hero (“Venha conhecer nossas promoções”)
-- `partners-bg.jpg` — fundo dos banners “Parceiros”
+## Referências do desafio
 
-Você pode trocar por suas exportações do Figma mantendo esses nomes (veja `public/images/README.txt`).
+- [Figma](https://www.figma.com/design/pl8ccQrjQjEFIdoZuAPu1E/Teste-Front-End-Jr--c%C3%B3pia-?node-id=0-1)
+- [JSON de produtos](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json)
 
-## Rodar em desenvolvimento
-
-```bash
-npm run dev
-```
-
-Em desenvolvimento, `VITE_PRODUCTS_URL` aponta para uma rota relativa e o **proxy do Vite** (`vite.config.ts`) repassa `/teste-front-end/...` para `app.econverse.com.br`, evitando CORS no navegador.
-
-## Build de produção
-
-```bash
-npm run build
-```
-
-Saída em `dist/`. Em produção, use a URL absoluta do JSON em `.env.production` (`VITE_PRODUCTS_URL`). Se a API não liberar CORS para o seu domínio, será preciso proxy no servidor ou mesmo host.
-
-## Testes
-
-Execução única (CI):
-
-```bash
-npm test
-```
-
-Modo desenvolvimento dos testes (Vitest em watch — reexecuta ao salvar arquivos):
-
-```bash
-npm run dev:test
-```
-
-Equivalente: `npm run test:watch`.
-
-## Lint
-
-```bash
-npm run lint
-```
-
-## Preview do build
-
-```bash
-npm run preview
-```
-
-## Variáveis de ambiente
-
-| Arquivo            | Função                          |
-| ------------------ | ------------------------------- |
-| `.env.development` | URL relativa + proxy local      |
-| `.env.production`  | URL absoluta do `produtos.json` |
-
-## Envio do teste (instruções originais)
-
-- Fazer fork do repositório para a sua conta no GitHub.
-- Enviar o link para **julia.gardiano@econverse.com.br** com o assunto **Teste Vaga FrontEnd**.
-
-Fontes oficiais do desafio: [Figma](https://www.figma.com/design/pl8ccQrjQjEFIdoZuAPu1E/Teste-Front-End-Jr--c%C3%B3pia-?node-id=0-1) e [JSON de produtos](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json).
+Envio do teste (instruções originais): fork no GitHub e link para **julia.gardiano@econverse.com.br**, assunto **Teste Vaga FrontEnd**.

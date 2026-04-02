@@ -18,7 +18,7 @@ Vitrine em React, TypeScript e Sass, fiel ao layout do desafio. Lista de produto
 
 Este projeto versiona `.env.development` e `.env.production` com a variável `VITE_PRODUCTS_URL` (URL do JSON — dado público, não é segredo).
 
-**Motivo aqui:** quem clonar o repo ou rodar o build em CI consegue subir o projeto sem adivinhar variáveis. Para um teste técnico, isso evita fricção.
+**Motivo aqui:** quem clonar o repo ou rodar o build em CI consegue subir o projeto sem adivinhar variáveis.
 
 **Na vida real** isso costuma ser evitado: credenciais e URLs internas não vão para o Git; usa-se `.env.example` (sem valores sensíveis), variáveis no painel da hospedagem ou um gerenciador de secrets. Sei que commitar `.env` não é o ideal em produção — foi uma escolha consciente **só** para este contexto.
 
